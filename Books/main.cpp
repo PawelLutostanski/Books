@@ -1,18 +1,40 @@
-#include "Books.h"
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+#include "file_oper.h"
 
-
-int main()
+int main(int argc, char * argv[])
 {
-	Book* headBook = nullptr;
-	pushBook(&headBook, "Mikolow", "0");
-	pushBook(&headBook, "Bikolow", "1");
-	pushBook(&headBook, "Oikolow", "2");
-	pushBook(&headBook, "Dikolow", "3");
-	pushBook(&headBook, "Zikolow", "4");
+	//_CrtMemState s1;
+	//_CrtMemCheckpoint(&s1);
+	{
+		std::string infile = "input.txt";
+		std::string outfile = "results.txt";
+		if(argc>2){}//at least 3 
+		else if(argv[2]=="-i")
+		{
+			infile = argv[3];
+		}
+		else if (argv[2] == "-o")
+		{
+			outfile = argv[3];
+		}
+		if (argc > 4){}
+		else if(argv[4] == "-i")
+		{
+			infile = argv[5];
+		}
+		else if (argv[4] == "-o")
+		{
+			outfile = argv[5];
+		}
+		Label* head = nullptr;
+		readInput(&head, infile);
+		writeOutput(&head, outfile);
+		Book* tmp = head->head;
+		destroyLabels(&head);
+	}
 
-	Label* head = nullptr;
-	pushLabel(&head, "Physics");
-	pushLabel(&head, "Philosophy");
-	pushLabel(&head, "Maths");
-	int z = 0;
+	//_CrtMemDumpStatistics(&s1);
+	//_CrtDumpMemoryLeaks();
 }

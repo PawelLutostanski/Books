@@ -1,0 +1,40 @@
+satire:
+Bulgakov; The Master and Margarita
+
+post-apocalyptic:
+Glukovsky; Metro 2033
+
+revange:
+King; Big Driver
+
+thriller:
+King; Big Driver
+
+novel:
+Bulgakov; The Master and Margarita
+Dostoevsky; Crime and punishemnt
+
+psychology:
+Dostoevsky; Crime and punishemnt
+King; Big Driver
+
+criminal:
+Dostoevsky; Crime and punishemnt
+
+adventure:
+Tolkien; The Hobbit
+
+fantasy:
+Bulgakov; The Master and Margarita
+Glukovsky; Metro 2033
+Tolkien; The Hobbit
+
+for juvenile:
+Aster; Cooking for beginners
+Hideo; 100 ways to cook Chicken
+Tolkien; The Hobbit
+
+cooking:
+Aster; Cooking for beginners
+Hideo; 100 ways to cook Chicken
+

@@ -115,10 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="file_oper.cpp" />
+    <ClCompile Include="lists_destruction.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="lists_generation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Books.h" />
+    <ClInclude Include="file_oper.h" />
+    <ClInclude Include="lists_destruction.h" />
+    <ClInclude Include="lists_generation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
