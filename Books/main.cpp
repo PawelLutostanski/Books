@@ -10,29 +10,36 @@ int main(int argc, char * argv[])
 	{
 		std::string infile = "input.txt";
 		std::string outfile = "results.txt";
-		if(argc>2){}//at least 3 
-		else if(argv[2]=="-i")
-		{
-			infile = argv[3];
+		if (argc > 2) 
+		{//at least 3 
+			if (!strcmp(argv[1],"-i"))
+			{
+				infile = argv[2];
+			}
+			else if (!strcmp(argv[1],"-o"))
+			{
+				outfile = argv[2];
+			}
 		}
-		else if (argv[2] == "-o")
+		if (argc > 4)
 		{
-			outfile = argv[3];
-		}
-		if (argc > 4){}
-		else if(argv[4] == "-i")
-		{
-			infile = argv[5];
-		}
-		else if (argv[4] == "-o")
-		{
-			outfile = argv[5];
+			if (!strcmp(argv[3],"-i"))
+			{
+				infile = argv[4];
+			}
+			else if (!strcmp(argv[3],"-o"))
+			{
+				outfile = argv[4];
+			}
 		}
 		Label* head = nullptr;
 		readInput(&head, infile);
-		writeOutput(&head, outfile);
-		Book* tmp = head->head;
-		destroyLabels(&head);
+		if (head) 
+		{
+			writeOutput(&head, outfile);
+			Book* tmp = head->head;
+			destroyLabels(&head);
+		}
 	}
 
 	//_CrtMemDumpStatistics(&s1);
